@@ -1,0 +1,5 @@
+#!/bin/sh
+if ! head -n 1 "$1" | grep -Eq "^(feat|fix|docs|chore|refactor|merge|test|ci|build|perf|style)(\(.+\))?: .+"; then
+  echo "ERROR: commit message must follow Conventional Commits"
+  exit 1
+fi
